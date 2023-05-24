@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Friends loop </title>
+
+  <!-- Import A-Frame and then AR.js -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+  
+</head>
+
+<a-scene style="margin : 0px; overflow: hidden;">
+
+  <!-- A-frame scene -->
+ <a-scene vr-model-ui="enabled: false;" embedded arjs="soucreType: webcam;
+ sourceWidth:1280; sourceHeight: 960;
+ displayWidth: 1280; displayHeight: 960;
+ debugUIEnabled: false,
+ "></a-scene>
+<a-assets>
+  <a-asset-item id="apple-obj" src="./assests/Apple/tinker.obj"></a-asset-item>
+  <a-asset-item id="apple-mtl" src="./assests/Apple/obj.mtl"></a-asset-item>
+  
+</a-assets>
+ 
+
+
+<!--project virtual flight-->
+<a-marker type="pattern" url="assests/Apple/apple-pattern.png">
+  <a-entity obj-model=obj: "apple-obj"; mtl: "apple-mtl" ></a-entity>
+</a-marker>
+
+
+</a-scene>
+
+</body>
+
+</html>
